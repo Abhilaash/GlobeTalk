@@ -5,4 +5,5 @@
         <item>Teacher</item>
         <item>Student</item>
     </string-array>
+    <string name="title_activity_session_page_teacher">SessionPageTeacher</string>
 </resources>

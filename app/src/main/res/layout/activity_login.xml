@@ -20,15 +20,15 @@
         <EditText android:id="@+id/input_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:hint="Email" />
+            android:inputType="textNoSuggestions"
+            android:hint="Username" />
 
         <!--  Password Label -->
-            <EditText android:id="@+id/input_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:hint="Password"/>
+        <EditText android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Password"/>
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/btn_login"
@@ -40,7 +40,7 @@
             android:text="Login"
             android:onClick="sendMessage"/>
 
-        <TextView android:id="@+id/link_signup"
+        <TextView android:id="@+id/signup"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"

@@ -21,7 +21,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Login" />
         </activity>
-        <activity android:name=".DisplayMessageActivity"></activity>
+        <activity android:name=".SessionPageTeacher" />
+        <activity android:name=".videoChat"></activity>
     </application>
 
 </manifest>

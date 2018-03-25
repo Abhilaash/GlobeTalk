@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.EditText;
 
 public class Login extends AppCompatActivity {
-    public static final String EXTRA_MESSAGE = "com.example.GlobeTalk.MESSAGE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,9 +20,10 @@ public class Login extends AppCompatActivity {
         Intent intent = new Intent(this, Welcome.class);
         EditText username = (EditText) findViewById(R.id.input_email);
         EditText password = (EditText) findViewById((R.id.input_password));
-
         String user = username.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, user);
-        startActivity(intent);
+        if(user.equalsIgnoreCase("abhilaash") || user.equalsIgnoreCase("therobotcarlson") || user.equalsIgnoreCase("irysad")) {
+            intent.putExtra("username", user);
+            startActivity(intent);
+        }
     }
 }
