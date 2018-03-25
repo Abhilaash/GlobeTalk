@@ -20,14 +20,14 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class SessionPageTeacher extends AppCompatActivity {
+public class SessionPageStudent extends AppCompatActivity {
 
     String username;
     ArrayList<String> languages;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_session_page_teacher);
+        setContentView(R.layout.activity_session_page_student);
         ImageView imageView;
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference();
@@ -90,6 +90,13 @@ public class SessionPageTeacher extends AppCompatActivity {
             imageView.setImageBitmap(BitmapFactory.decodeResource(
                     getResources(), R.drawable.image_preview));
             imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(), videoChat.class);
+                    startActivity(intent);
+                }
+            });
             layout.addView(imageView);
         }
 
@@ -101,6 +108,13 @@ public class SessionPageTeacher extends AppCompatActivity {
             imageView.setImageBitmap(BitmapFactory.decodeResource(
                     getResources(), R.drawable.image_preview));
             imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(), videoChat.class);
+                    startActivity(intent);
+                }
+            });
             layout.addView(imageView);
         }
 
@@ -108,10 +122,5 @@ public class SessionPageTeacher extends AppCompatActivity {
         username = intent.getStringExtra("username");
         setTitle("Welcome: " + username);
         languages = intent.getStringArrayListExtra("Languages");
-    }
-
-    public void StartChat(View v) {
-        Intent intent = new Intent(this, videoChat.class);
-        startActivity(intent);
     }
 }

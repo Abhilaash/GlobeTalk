@@ -1,14 +1,11 @@
 package com.hackuva.globetalk;
 
-import android.util.Log;
 import android.webkit.URLUtil;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.concurrent.ExecutionException;
 
 /**

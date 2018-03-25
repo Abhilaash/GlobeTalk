@@ -22,7 +22,8 @@
                 android:value=".Login" />
         </activity>
         <activity android:name=".SessionPageTeacher" />
-        <activity android:name=".videoChat"></activity>
+        <activity android:name=".videoChat" />
+        <activity android:name=".SessionPageStudent"></activity>
     </application>
 
 </manifest>

@@ -1,27 +1,19 @@
 package com.hackuva.globetalk;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -81,16 +73,6 @@ public class Teacher extends Fragment {
                 // Write a message to the database
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myRef = database.getReference();
-//                JSONObject json = new JSONObject();
-//                JSONArray arraylang = new JSONArray();
-//                try {
-//                    json.put("username", username);
-//                    arraylang.put(languages);
-//                    json.put("languages", arraylang);
-//                    json.put("teacher", "true");
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
                 ArrayList<String> lclang = new ArrayList<>();
                 for(String s : languages) {
                     lclang.add(s.toLowerCase());
@@ -99,7 +81,7 @@ public class Teacher extends Fragment {
                 user.child("username").setValue(username);
                 user.child("teacher").setValue(true);
                 user.child("languages").setValue(lclang);
-                intent.putExtra("username", username.toLowerCase());
+                intent.putExtra("username", username);
                 startActivity(intent);
             }
         });

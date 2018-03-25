@@ -24,13 +24,28 @@
         android:layout_width="272dp"
         android:layout_height="49dp"
         android:ems="10"
+        android:entries="@array/languages"
         android:hint="Language"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/spinner2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="272dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:entries="@array/languages"
+        android:hint="Fluent Language"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner" />
 
     <Button
         android:id="@+id/button"
@@ -41,6 +56,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
 
 </android.support.constraint.ConstraintLayout>
